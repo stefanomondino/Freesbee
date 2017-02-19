@@ -7,6 +7,9 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
+import pop
 extension NavigationController {
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent

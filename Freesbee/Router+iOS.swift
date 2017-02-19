@@ -8,7 +8,7 @@
 
 import Foundation
 import SafariServices
-
+import Boomerang
 extension SFSafariViewController {
     class func canOpenURL(URL: URL) -> Bool {
         return URL.host != nil && (URL.scheme == "http" || URL.scheme == "https")
