@@ -12,7 +12,7 @@ import RxSwift
 class ShowItemCollectionViewCell: UICollectionViewCell , ViewModelBindable {
     var viewModel: ViewModelType?
     let disposeBag = DisposeBag()
-    @IBOutlet weak var lbl_title: UILabel!
+    @IBOutlet weak var lbl_title: UILabel?
     @IBOutlet weak var img_show: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,9 +24,9 @@ class ShowItemCollectionViewCell: UICollectionViewCell , ViewModelBindable {
             return
         }
         self.heroID = viewModel.heroID
-        self.heroModifiers = [.arc]
+        self.heroModifiers = [.zPosition(100)]
         self.viewModel = viewModel
-        self.lbl_title.text = viewModel.title
+        self.lbl_title?.text = viewModel.title
         if (self.isPlaceholder == false) {
             viewModel.image.takeUntil(self.rx.prepareForReuse).bindTo(self.img_show.rx.image).addDisposableTo(self.disposeBag)
         }

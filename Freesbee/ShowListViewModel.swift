@@ -37,6 +37,6 @@ final class ShowListViewModel : ListViewModelType, ViewModelTypeSelectable {
         }
     }
     init() {
-        self.dataHolder = ListDataHolder(data: APIManager.query("big").structured())
+        self.dataHolder = ListDataHolder(data: APIManager.shows().structured())
     }
 }

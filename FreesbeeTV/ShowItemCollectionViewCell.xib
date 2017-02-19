@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="ESe-3H-THW" customClass="ShowItemCollectionViewCell" customModule="FreesbeeTV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="845" height="873"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="845" height="873"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4r1-4z-xwz">
+                        <rect key="frame" x="8" y="0.0" width="845" height="873"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="4r1-4z-xwz" secondAttribute="height" multiplier="9:16" id="WYi-aF-DnS"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="4r1-4z-xwz" secondAttribute="bottom" priority="999" id="IeJ-Jo-Lj6"/>
+                <constraint firstAttribute="trailing" secondItem="4r1-4z-xwz" secondAttribute="trailing" id="VzB-sY-GNV"/>
+                <constraint firstItem="4r1-4z-xwz" firstAttribute="leading" secondItem="ESe-3H-THW" secondAttribute="leading" id="Xbl-Pv-Nr9"/>
+                <constraint firstItem="4r1-4z-xwz" firstAttribute="top" secondItem="ESe-3H-THW" secondAttribute="top" id="hO8-gE-u53"/>
+            </constraints>
+            <size key="customSize" width="845" height="873"/>
+            <connections>
+                <outlet property="img_show" destination="4r1-4z-xwz" id="oCz-7J-MZu"/>
+            </connections>
+            <point key="canvasLocation" x="915.5" y="-200.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -66,6 +66,14 @@ struct APIManager {
                 return .empty()
             })
     }
+    static func shows() -> Observable<[Show]> {
+        
+        return self.provider.request(.shows)
+            .mapArray(type: Show.self)
+            .catchError({ (error) -> Observable<[Show]> in
+                return .empty()
+            })
+    }
     static func detail(show:Show) -> Observable<Show>{
         return self.provider.request( .detail(identifier: String(stringInterpolationSegment:show.id)))
             .mapObject(type: Show.self)

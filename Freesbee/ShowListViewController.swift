@@ -21,6 +21,8 @@ class ShowListViewController : UIViewController, ViewModelBindable, UICollection
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.collectionView.remembersLastFocusedIndexPath = true
+        self.automaticallyAdjustsScrollViewInsets = false
             self.isHeroEnabled = true
         
     }
@@ -43,18 +45,21 @@ class ShowListViewController : UIViewController, ViewModelBindable, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return 8
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return 8
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets.zero
+        return UIEdgeInsetsMake(8, 8, 8, 8)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return collectionView.autosizeItemAt(indexPath: indexPath, itemsPerLine: 1)
+        let n = round(self.view.frame.size.width/160.0) //on iphoneSE (320px wide) , 2 columns.
+        return collectionView.autosizeItemAt(indexPath: indexPath, itemsPerLine: Int(n))
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.viewModel?.selection.execute(.item(indexPath))
     }
+    
+    
 }

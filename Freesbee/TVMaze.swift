@@ -12,6 +12,7 @@ import Moya
 
 
 enum TVMaze {
+    case shows
     case search(String)
     case detail(identifier:String)
     case schedule(country:String?, date:Date?)
@@ -50,6 +51,8 @@ extension TVMaze : TargetType {
     }
     public var path: String {
         switch self {
+        case .shows:
+            return "shows"
         case .search:
             return "search/shows"
         case .schedule:
