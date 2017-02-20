@@ -25,10 +25,11 @@ extension ListViewModelType {
 }
 enum Cell : String, ListIdentifier {
     case showItem = "ShowItemCollectionViewCell"
-
+    case showTitleItem = "ShowTitleItemCollectionViewCell"
     static func all() -> [Cell] {
         return [
-           .showItem
+           .showItem,
+           .showTitleItem
         ]
     }
     static func headers() -> [Cell] {

@@ -29,7 +29,7 @@ class ShowDetailViewController : UIViewController, ViewModelBindable, UICollecti
         guard let viewModel = viewModel as? ShowDetailViewModel else {
             return
         }
-        
+        self.title = viewModel.title
         self.viewModel = viewModel
         self.collectionView.bindTo(viewModel:viewModel)
         self.collectionView.delegate = self
@@ -46,9 +46,9 @@ class ShowDetailViewController : UIViewController, ViewModelBindable, UICollecti
         return UIEdgeInsets.zero
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        var size = collectionView.autosizeItemAt(indexPath: indexPath, itemsPerLine: 1)
+        return collectionView.autosizeItemAt(indexPath: indexPath, itemsPerLine: 1)
         //size.height = size.height * 1.5
-        return size
+    
     }
     
 }

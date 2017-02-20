@@ -14,13 +14,15 @@ final class ShowDetailViewModel : ListViewModelType , ItemViewModelType{
     var dataHolder: ListDataHolderType = ListDataHolder()
     var itemIdentifier: ListIdentifier = ""
     var model: ItemViewModelType.Model
+    var title:String?
     func itemViewModel(_ model: ModelType) -> ItemViewModelType? {
         return model as? ItemViewModelType
     }
     
     init(model: Show) {
+        self.title = model.title
      self.model = model
-        let array:[ItemViewModelType] = [ViewModelFactory.showItem(fromModel: model)]
+        let array:[ItemViewModelType] = [ViewModelFactory.showTitleItem(fromModel: model)]
         self.dataHolder = ListDataHolder(data: .just(ModelStructure(array)))
     }
 }

@@ -22,6 +22,11 @@ struct ViewModelFactory {
     static func showItem(fromModel show:Show) -> ItemViewModelType {
         return ShowItemViewModel(model: show)
     }
+    static func showTitleItem(fromModel show:Show) -> ItemViewModelType {
+        let item = ShowItemViewModel(model: show)
+        item.itemIdentifier = Cell.showTitleItem
+        return item
+    }
     static func showDetail(fromModel show:Show) -> ViewModelType {
         return ShowDetailViewModel(model: show)
     }

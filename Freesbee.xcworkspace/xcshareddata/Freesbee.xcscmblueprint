@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2E52F9BE461C56D25B59BAC22756E67383B81C2B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "55BC7E9070392739656A1401405874AC996C73EB" : 9223372036854775807,
+    "2E52F9BE461C56D25B59BAC22756E67383B81C2B" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "CA259B5A-5365-4522-B86F-CB9BE16FCCAD",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "55BC7E9070392739656A1401405874AC996C73EB" : "Boomerang\/",
+    "2E52F9BE461C56D25B59BAC22756E67383B81C2B" : "Freesbee\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Freesbee",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Freesbee.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:stefanomondino\/Freesbee.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2E52F9BE461C56D25B59BAC22756E67383B81C2B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:stefanomondino\/Boomerang.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "55BC7E9070392739656A1401405874AC996C73EB"
+    }
+  ]
+}

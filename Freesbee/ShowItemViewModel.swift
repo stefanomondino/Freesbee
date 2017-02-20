@@ -15,11 +15,11 @@ final class ShowItemViewModel : ItemViewModelType {
     var itemIdentifier:ListIdentifier = Cell.showItem
     var title:String?
     var image:Observable<UIImage?>
-    var heroID:String?
+    var heroID:String
     init(model:Show) {
         self.model = model
         self.title = model.title
         self.image = APIManager.downloadImage(model.imageURL)
-        self.heroID = model.imageURL?.absoluteString
+        self.heroID = model.imageURL?.absoluteString ?? ""
     }
 }

@@ -19,7 +19,7 @@ enum ShowListOutput : SelectionOutput {
 }
 final class ShowListViewModel : ListViewModelType, ViewModelTypeSelectable {
     var dataHolder: ListDataHolderType = ListDataHolder()
-    
+    var title = "Freesbee"
     func itemViewModel(fromModel model: ModelType) -> ItemViewModelType? {
         guard let item = model as? Show else {
             return nil
