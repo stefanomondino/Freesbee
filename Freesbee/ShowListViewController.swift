@@ -42,12 +42,12 @@ class ShowListViewController : UIViewController, ViewModelBindable, UICollection
             }
         }).addDisposableTo(self.disposeBag)
         viewModel.reload()
-        let refresh = UIRefreshControl()
-        refresh.rx.bindTo(action: viewModel.dataHolder.reloadAction, controlEvent: refresh.rx.controlEvent(.allEvents)) { (_) in
-            return nil
-        }
-        viewModel.dataHolder.reloadAction.executing.bindTo(refresh.rx.isRefreshing).addDisposableTo(self.disposeBag)
-        self.collectionView.addSubview(refresh)
+//        let refresh = UIRefreshControl()
+//        refresh.rx.bindTo(action: viewModel.dataHolder.reloadAction, controlEvent: refresh.rx.controlEvent(.allEvents)) { (_) in
+//            return nil
+//        }
+//        viewModel.dataHolder.reloadAction.executing.bindTo(refresh.rx.isRefreshing).addDisposableTo(self.disposeBag)
+//        self.collectionView.addSubview(refresh)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
